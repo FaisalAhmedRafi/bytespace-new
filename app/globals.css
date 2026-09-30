@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-white text-ink font-sans antialiased; }
+.bg-grid-blue { @apply bg-brand bg-grid; background-size: 96px 96px; }
+.btn-lime { @apply inline-flex items-center justify-center rounded-full bg-lime px-6 py-3 font-semibold text-ink transition hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink; }
+.input { @apply w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-4 text-lg outline-none focus:border-brand focus:bg-white; }
+
+.glow-fade-top {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 160px);
+  mask-image: linear-gradient(to bottom, transparent, #000 160px);
+}
+
+.growth-gradient {
+  background:
+
+    /* 1. Large lime glow - TOP LEFT */
+    radial-gradient(
+      ellipse 45% 38% at 25% 5%,
+      rgba(210, 255, 0, 0.50) 0%,
+      rgba(210, 255, 0, 0.25) 40%,
+      transparent 75%
+    ),
+
+    /* 2. Blue glow - TOP RIGHT */
+    radial-gradient(
+      ellipse 42% 38% at 100% 8%,
+      rgba(145, 165, 255, 0.25) 0%,
+      rgba(145, 165, 255, 0.12) 45%,
+      transparent 80%
+    ),
+
+    /* 3. Blue glow - LEFT/MIDDLE */
+    radial-gradient(
+      ellipse 30% 32% at 5% 55%,
+      rgba(145, 165, 255, 0.30) 0%,
+      rgba(145, 165, 255, 0.15) 45%,
+      transparent 80%
+    ),
+
+    /* 4. Small blue glow - RIGHT/MIDDLE */
+    radial-gradient(
+      ellipse 30% 35% at 100% 58%,
+      rgba(145, 165, 255, 0.16) 0%,
+      transparent 75%
+    ),
+
+    /* 5. Lime glow - BOTTOM LEFT */
+    radial-gradient(
+      ellipse 40% 28% at 5% 80%,
+      rgba(210, 255, 0, 0.48) 0%,
+      rgba(210, 255, 0, 0.20) 45%,
+      transparent 80%
+    ),
+
+    /* 6. Large blue glow - BOTTOM RIGHT */
+    radial-gradient(
+      ellipse 55% 50% at 100% 100%,
+      rgba(145, 165, 255, 0.42) 0%,
+      rgba(145, 165, 255, 0.20) 45%,
+      transparent 82%
+    ),
+
+    #ffffff;
+}
+
+/* Testimonial section gradient */
+/* =========================================
+   Testimonial Section
+========================================= */
+
+.testimonial-gradient {
+  position: relative;
+  overflow: hidden;
+  background:
+    /* 1. Top-middle lime glow */
+    radial-gradient(
+      ellipse 25% 50% at 48% 20%,
+      rgba(210, 255, 0, 0.42) 0%,
+      rgba(210, 255, 0, 0.22) 35%,
+      rgba(210, 255, 0, 0.08) 58%,
+      transparent 80%
+    ),
+
+    /* 2. Right-middle lime glow */
+    radial-gradient(
+      ellipse 25% 75% at 91% 50%,
+      rgba(210, 255, 0, 0.35) 0%,
+      rgba(210, 255, 0, 0.20) 35%,
+      rgba(210, 255, 0, 0.07) 60%,
+      transparent 80%
+    ),
+
+    /* 3. Bottom-left blue glow */
+    radial-gradient(
+      ellipse 55% 85% at 0% 100%,
+      rgba(147, 165, 255, 0.38) 0%,
+      rgba(147, 165, 255, 0.20) 38%,
+      rgba(147, 165, 255, 0.07) 60%,
+      transparent 82%
+    ),
+
+    #ffffff;
+}
+
+
+/* Keep all actual content above the gradient */
+.testimonial-gradient > * {
+  position: relative;
+  z-index: 1;
+}
