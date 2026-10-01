@@ -5,17 +5,17 @@ import AvatarStack from "../../assets/AutoLayoutHorizontal.png";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className="bg-grid-blue grid h-dvh grid-rows-1 gap-4 overflow-hidden p-3 lg:grid-cols-[1.1fr_1fr] lg:gap-8 lg:p-8 lg:flex lg:items-stretch lg:justify-center">
+    <main className="bg-grid-blue flex min-h-dvh flex-col items-center justify-center gap-4 overflow-y-auto p-3 lg:h-dvh lg:min-h-0 lg:flex-row lg:items-stretch lg:justify-center lg:gap-8 lg:overflow-hidden lg:p-8">
       
-      <section className="min-h-0 w-[40%] flex flex-col justify-center text-white lg:flex lg:h-full mx-6">
-        <div className="flex flex-col gap-4 w-full max-w-lg">
+      <section className="mx-0 flex w-full max-w-xl flex-col items-center justify-center text-center text-white lg:mx-6 lg:h-full lg:w-[40%] lg:max-w-none lg:items-start lg:text-left">
+        <div className="flex w-full max-w-lg flex-col items-center gap-4 lg:items-start">
         <Image src={Logo} alt="ByteSpace Logo" className="h-8 w-8" />
         <h2 className="text-2xl font-bold">Sign up and come in</h2>
         <p>Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.</p>
-        <Image src={auth} alt="auth image" className="h-auto max-h-[calc(100dvh-4rem)] w-full max-w-lg object-contain" />
+        <Image src={auth} alt="auth image" className="hidden h-auto max-h-[calc(100dvh-4rem)] w-full max-w-lg object-contain lg:block" />
         </div>
       </section>
-      <section className="flex min-h-0 w-[30%] items-center justify-center mx-6 pt-10 lg:h-full">{children}</section>
+      <section className="mx-0 flex w-full max-w-xl items-center justify-center lg:mx-6 lg:h-full lg:w-[30%] lg:max-w-none lg:pt-10">{children}</section>
     </main>
   );
 }
