@@ -81,6 +81,6 @@ export const shapes = [
   { src: coneLeft.src, style: { left: "0%", top: "35%", width: "11.3%" } },
   { src: coneLime.src, style: { right: "12%", top: "2%", width: "13.1%" } },
   { src: torusLime.src, style: { left: "4%", bottom: "0%", width: "16.5%" } },
-  { src: coneRight.src, style: { right: "1%", top: "18%", width: "11.3%" } },
+  { src: coneRight.src, style: { right: "0%", top: "18%", width: "11.3%" } },
   { src: springRight.src, style: { right: "3%", bottom: "0%", width: "13.2%" } },
 ];

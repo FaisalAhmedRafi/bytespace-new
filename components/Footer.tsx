@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/Logo/Footer_Logo.png";
 
 const cols = [
   ["Featured Courses", "Featured Categories", "Business", "IT", "Design"],
