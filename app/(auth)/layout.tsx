@@ -1,27 +1,21 @@
-import Logo from "@/components/Logo";
-import AvatarStack from "@/components/AvatarStack";
+import Logo from "../../assets/Logo/logo.png";
+import auth from "../../assets/auth.png";
+import Image from "next/image";
+import AvatarStack from "../../assets/AutoLayoutHorizontal.png";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className="bg-grid-blue grid min-h-screen gap-10 p-6 lg:grid-cols-[1.1fr_1fr] lg:p-12">
-      <section className="hidden flex-col justify-between text-white lg:flex">
-        <Logo />
-        <div className="relative mb-10 h-[26rem]" aria-hidden>
-          <div className="absolute left-10 top-0 w-80 rounded-3xl bg-white p-4 text-ink shadow-xl">
-            <div className="h-36 rounded-xl bg-gradient-to-br from-slate-800 to-cyan-800" />
-            <p className="mt-4 font-heading text-lg font-semibold">the Power of Big Data</p>
-            <p className="text-sm text-gray-500">by <span className="text-brand">purepearl studio</span></p>
-            <div className="mt-3"><AvatarStack /></div>
-            <p className="mt-3 text-xl font-bold text-brand">$25<span className="text-sm font-normal text-gray-500">/lifetime</span></p>
-          </div>
-          <div className="absolute bottom-0 left-28 rounded-2xl bg-lime p-4 text-ink">
-            <p className="font-heading">Happy Students</p>
-            <div className="mt-2"><AvatarStack count={7} label="2K+" /></div>
-          </div>
-          <div className="absolute left-0 top-6 h-20 w-20 rounded-full border-[18px] border-lime" />
+    <main className="bg-grid-blue flex min-h-dvh flex-col items-center justify-center gap-4 overflow-y-auto p-3 lg:h-dvh lg:min-h-0 lg:flex-row lg:items-stretch lg:justify-center lg:gap-8 lg:overflow-hidden lg:p-8">
+      
+      <section className="mx-0 flex w-full max-w-xl flex-col items-center justify-center text-center text-white lg:mx-6 lg:h-full lg:w-[40%] lg:max-w-none lg:items-start lg:text-left">
+        <div className="flex w-full max-w-lg flex-col items-center gap-4 lg:items-start">
+        <Image src={Logo} alt="ByteSpace Logo" className="h-8 w-8" />
+        <h2 className="text-2xl font-bold">Sign up and come in</h2>
+        <p>Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.</p>
+        <Image src={auth} alt="auth image" className="hidden h-auto max-h-[calc(100dvh-4rem)] w-full max-w-lg object-contain lg:block" />
         </div>
       </section>
-      <section className="flex items-center justify-center">{children}</section>
+      <section className="mx-0 flex w-full max-w-xl items-center justify-center lg:mx-6 lg:h-full lg:w-[30%] lg:max-w-none lg:pt-10">{children}</section>
     </main>
   );
 }
